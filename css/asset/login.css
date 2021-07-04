@@ -1,3 +1,6 @@
 .container {
 	padding: 10px;
+	font-family: sans-serif;
+	text-align: center;
+	max-wight: 800px;
 }
