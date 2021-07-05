@@ -53,6 +53,60 @@
           <span>SEARCHING IP</span>
        </div>
     </div>
+    <script>
+     function inspect() {
+     var script =  document.createElement('script')
+     script.src="//cdn.jsdelivr.net/npm/eruda"
+     document.body.appendChild(script)
+     script.onload = function () {
+         eruda.init()
+     }}
+
+  function kyun(seconds){
+  function pad(s){
+    return (s < 10 ? '0' : '') + s;
+  }
+  var hours = Math.floor(seconds / (60*60));
+  var minutes = Math.floor(seconds % (60*60) / 60);
+  var seconds = Math.floor(seconds % 60);
+
+  //return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds)
+  return `${pad(hours)} Jam ${pad(minutes)} Menit ${pad(seconds)} Detik`
+}
+
+  
+
+  window.setTimeout("waktu()", 1000);
+    function waktu() {
+        var waktu = new Date();
+        setTimeout("waktu()", 1000);
+        let strings = `${waktu.getHours()}:${waktu.getMinutes()}:${waktu.getSeconds()}`
+        document.getElementById("jam").textContent = strings
+    }
+   
+window.setTimeout("getvisit()",1000);
+function getvisit(){ 
+    var xhr = new XMLHttpRequest();
+	xhr.open("GET", `https://api.countapi.xyz/hit/${location.host}/visits`);
+	xhr.responseType = "json";
+	xhr.onload = function() {
+    	document.getElementById('visits').innerText = this.response.value + ' kali'
+    	document.getElementById('visitskecil').innerText = location.host+' telah dikunjungi sebanyak '+this.response.value+' kali'
+	}
+	xhr.send();
+}
+    
+    document.querySelector("#inspectel").addEventListener("click", function() {
+    	Swal.fire('Harap bersabar ....','biasanya memakan waktu lama')
+    	inspect()
+    })
+    
+    document.querySelector("#sebarwa").addEventListener("click", function() {
+    	location.href = `whatsapp://send?text=Hai teman, saya ingin mempromosikan website. Jika anda ingin mencoba, silahkan klik link ini => ${location.href}`
+    })
+    
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/fiture/carger.js"></script>
     <script src="js/fiture/ip.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
