@@ -1,12 +1,9 @@
 .foto {
 	text-align: center;
+	wight: 100px;
+	height: 100px;
 }
 
 .foto:hover {
 	margin: -10px;
-}
-
-body {
-	padding: 25px;
-	background-color: blue;
 }
