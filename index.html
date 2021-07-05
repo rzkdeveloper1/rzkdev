@@ -55,70 +55,129 @@
     </div>
     <!-- TIME -->
     <div class="time">
-      <script>
-          today = new Date
-		  locale = 'id'
-		  hari = today.toLocaleDateString(locale, { weekday: 'long' })
-		  tahun = today.getFullYear()
-		  bulan = today.getMonth()+1
-		  tanggal = today.getDate()
-		  time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      <script>
+
+          today = new Date
+
+		  locale = 'id'
+
+		  hari = today.toLocaleDateString(locale, { weekday: 'long' })
+
+		  tahun = today.getFullYear()
+
+		  bulan = today.getMonth()+1
+
+		  tanggal = today.getDate()
+
+		  time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
 	  </script>
-	  <div class="h5 mb-0 font-weight-bold text-gray-800"><script>document.write(`${hari}, ${tanggal}-${bulan}-${tahun}`)</script></div>
+	  <div class="h5 mb-0 font-weight-bold text-gray-800 text-light"><script>document.write(`${hari}, ${tanggal}-${bulan}-${tahun}`)</script></div>
 	  <span>tanggal</span>
 	</div>
     <script>
-     function inspect() {
-     var script =  document.createElement('script')
-     script.src="//cdn.jsdelivr.net/npm/eruda"
-     document.body.appendChild(script)
-     script.onload = function () {
-         eruda.init()
-     }}
-
-  function kyun(seconds){
-  function pad(s){
-    return (s < 10 ? '0' : '') + s;
-  }
-  var hours = Math.floor(seconds / (60*60));
-  var minutes = Math.floor(seconds % (60*60) / 60);
-  var seconds = Math.floor(seconds % 60);
-
-  //return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds)
-  return `${pad(hours)} Jam ${pad(minutes)} Menit ${pad(seconds)} Detik`
-}
-
-  
-
-  window.setTimeout("waktu()", 1000);
-    function waktu() {
-        var waktu = new Date();
-        setTimeout("waktu()", 1000);
-        let strings = `${waktu.getHours()}:${waktu.getMinutes()}:${waktu.getSeconds()}`
-        document.getElementById("jam").textContent = strings
-    }
-   
-window.setTimeout("getvisit()",1000);
-function getvisit(){ 
-    var xhr = new XMLHttpRequest();
-	xhr.open("GET", `https://api.countapi.xyz/hit/${location.host}/visits`);
-	xhr.responseType = "json";
-	xhr.onload = function() {
-    	document.getElementById('visits').innerText = this.response.value + ' kali'
-    	document.getElementById('visitskecil').innerText = location.host+' telah dikunjungi sebanyak '+this.response.value+' kali'
-	}
-	xhr.send();
-}
-    
-    document.querySelector("#inspectel").addEventListener("click", function() {
-    	Swal.fire('Harap bersabar ....','biasanya memakan waktu lama')
-    	inspect()
-    })
-    
-    document.querySelector("#sebarwa").addEventListener("click", function() {
-    	location.href = `whatsapp://send?text=Hai teman, saya ingin mempromosikan website. Jika anda ingin mencoba, silahkan klik link ini => ${location.href}`
-    })
-    
+     function inspect() {
+
+     var script =  document.createElement('script')
+
+     script.src="//cdn.jsdelivr.net/npm/eruda"
+
+     document.body.appendChild(script)
+
+     script.onload = function () {
+
+         eruda.init()
+
+     }}
+
+
+
+  function kyun(seconds){
+
+  function pad(s){
+
+    return (s < 10 ? '0' : '') + s;
+
+  }
+
+  var hours = Math.floor(seconds / (60*60));
+
+  var minutes = Math.floor(seconds % (60*60) / 60);
+
+  var seconds = Math.floor(seconds % 60);
+
+
+
+  //return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds)
+
+  return `${pad(hours)} Jam ${pad(minutes)} Menit ${pad(seconds)} Detik`
+
+}
+
+
+
+  
+
+
+
+  window.setTimeout("waktu()", 1000);
+
+    function waktu() {
+
+        var waktu = new Date();
+
+        setTimeout("waktu()", 1000);
+
+        let strings = `${waktu.getHours()}:${waktu.getMinutes()}:${waktu.getSeconds()}`
+
+        document.getElementById("jam").textContent = strings
+
+    }
+
+   
+
+window.setTimeout("getvisit()",1000);
+
+function getvisit(){ 
+
+    var xhr = new XMLHttpRequest();
+
+	xhr.open("GET", `https://api.countapi.xyz/hit/${location.host}/visits`);
+
+	xhr.responseType = "json";
+
+	xhr.onload = function() {
+
+    	document.getElementById('visits').innerText = this.response.value + ' kali'
+
+    	document.getElementById('visitskecil').innerText = location.host+' telah dikunjungi sebanyak '+this.response.value+' kali'
+
+	}
+
+	xhr.send();
+
+}
+
+    
+
+    document.querySelector("#inspectel").addEventListener("click", function() {
+
+    	Swal.fire('Harap bersabar ....','biasanya memakan waktu lama')
+
+    	inspect()
+
+    })
+
+    
+
+    document.querySelector("#sebarwa").addEventListener("click", function() {
+
+    	location.href = `whatsapp://send?text=Hai teman, saya ingin mempromosikan website. Jika anda ingin mencoba, silahkan klik link ini => ${location.href}`
+
+    })
+
+    
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/fiture/carger.js"></script>
