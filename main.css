@@ -10,3 +10,7 @@
 .foto:hover {
 	margin: -10px;
 }
+
+body {
+	padding: 25px;
+}
