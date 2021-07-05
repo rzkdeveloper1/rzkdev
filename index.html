@@ -53,6 +53,19 @@
           <span>SEARCHING IP</span>
        </div>
     </div>
+    <!-- TIME -->
+    <div class="time">
+      <script>
+          today = new Date
+		  locale = 'id'
+		  hari = today.toLocaleDateString(locale, { weekday: 'long' })
+		  tahun = today.getFullYear()
+		  bulan = today.getMonth()+1
+		  tanggal = today.getDate()
+		  time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+	  </script>
+	  <span>tanggal</span>
+	</div>
     <script>
      function inspect() {
      var script =  document.createElement('script')
