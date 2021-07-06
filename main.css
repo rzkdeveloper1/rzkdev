@@ -31,3 +31,8 @@
 	right: 4px;
 	opacity: 0.3;
 	font-size: 90px;
+}
+
+.progress {
+	border-radius: 6px;
+}
