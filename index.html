@@ -76,46 +76,6 @@
 	    <div class="h5 mb-0 font-weight-bold text-gray-800"><script>document.write(`${hari}, ${tanggal}-${bulan}-${tahun}`)</script></div>
 	    <span>tanggal</span>
 	  </div>
-      <i class="fas fa-user-slash"></i>
-      <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="card card-stats">
-                <div class="card-header card-header-info card-header-icon">
-                  <div class="card-icon">
-                    <i class="fa fa-twitter"></i>
-                  </div>
-                  <p class="card-category">Followers</p>
-                  <h3 class="card-title">+245</h3>
-                </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    <i class="material-icons">update</i> Just Updated
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row text-white mt-5">
-              <div class="card bg-success ml-10" style="width: 18rem;">
-              	<div class="card-body">
-          	        <div class="card-body-icon">
-          	            <i class="fab fa-whatsapp"></i>
-                      </div>
-                      <h5 class="card-title">Watsapp</h5>
-                      <div class="display-4">5</div>
-                      <a href="#"><p class="card-text text-white">Lihat <i class="fas fa-angle-double-right ml-2"></i></p></a>
-                  </div>
-              </div>
-              <div class="card bg-success ml-10" style="width: 18rem;">
-              	<div class="card-body">
-          	        <div class="card-body-icon">
-          	            <i class="fab fa-whatsapp"></i>
-                      </div>
-                      <h5 class="card-title">Watsapp</h5>
-                      <div class="display-4">5</div>
-                      <a href="#"><p class="card-text text-white">Lihat <i class="fas fa-angle-double-right ml-2"></i></p></a>
-                  </div>
-              </div>
-          </div>
           <div class="card text-white bg-primary mb-3 mt-3 ml-7" style="max-width: 18rem; margin: 7px;">
               <div class="card-header">
                   <i class="fas fa-user"></i>
@@ -128,14 +88,6 @@
               </div>
           </div>
           <div class="card text-white bg-primary mb-3 mt-3 ml-7" style="max-width: 18rem; margin: 7px;">
-              <div class="card-header">Header</div> <i class="fas fa-user"></i>
-              <div class="card-body">
-                  <h5 class="card-title">Jumplah User</h5>
-                  <div class="display-4">20+</div>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-          </div>
-          <div class="card text-white bg-primary mb-3 mt-3 ml-7" style="max-width: 18rem; margin: 7px;">
               <div class="card-header">
                   <i class="fas fa-wifi"></i>
                   <span>IP Address</span>
@@ -144,6 +96,26 @@
                   <h5 class="card-title">IP Address Kamu</h5>
                   <div class="display-4" id="ipanda">Sedang Mencari</div>
                   <p class="card-text">IP Address V4 Yang Sedang Anda Pakai</p>
+              </div>
+          </div>
+          <div class="card text-white bg-primary mb-3 mt-3 ml-7" style="max-width: 18rem; margin: 7px;">
+              <div class="card-header">
+                  <i class="fas fa-user"></i>
+                  <span>Tanggal</span>
+              </div>
+              <script>
+                  today = new Date
+		          locale = 'id'
+		          hari = today.toLocaleDateString(locale, { weekday: 'long' })
+		          tahun = today.getFullYear()
+		          bulan = today.getMonth()+1
+		          tanggal = today.getDate()
+		          time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+	          </script>
+              <div class="card-body">
+                  <h5 class="card-title">Hari Dan Tanggal</h5>
+                  <div class="display-4"><script>document.write(`${hari}, ${tanggal}-${bulan}-${tahun}`)</script></div>
+                  <p class="card-text">Hari Dan Tanggal</p>
               </div>
           </div>
       <script>
