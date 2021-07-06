@@ -16,4 +16,6 @@
 .iconip {
 	z-index: 0;
 	position: absolute;
+	top: 25px;
+	right: 4px;
 }
