@@ -104,6 +104,7 @@
                   <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><span class="opacity: 0.4">90%</span></div>
               </div>
           </div>
+          <div id="cpu"></div>
       <script>
        function inspect() {
 
@@ -171,8 +172,8 @@
 	  xhr.responseType = "json";
 	  xhr.onload = function() {
       	document.getElementById('uptime').innerText = this.response.uptime
-      	document.getElementById('cpu').innerText = `Model: ${this.response.cpumodel}\nSpeed: ${this.response.cpuspeed}`
-      	document.getElementById('ramm').innerText = this.response.ramterpakai+'/'+this.response.totalram+' MB'
+      	document.getElementById('cpu').innerText = `Model: ${this.response.cpumodel}`
+      	document.getElementById('ram').innerText = this.response.ramterpakai+'/'+this.response.totalram+' MB'
       	document.getElementById('diskspace').innerText = this.response.diskused+'/'+this.response.totaldisk+' MB'
 	  }
 	  xhr.send();
