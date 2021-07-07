@@ -162,6 +162,21 @@
           document.getElementById("jam").textContent = strings
 
       }
+      
+  window.setTimeout("getinfohost()",1000);
+    function getinfohost(){ 
+	  setTimeout("getinfohost()", 5000);
+      var xhr = new XMLHttpRequest();
+	  xhr.open("GET", `${location.origin}/?req=infohost`);
+	  xhr.responseType = "json";
+	  xhr.onload = function() {
+      	document.getElementById('uptime').innerText = this.response.uptime
+      	document.getElementById('cpu').innerText = `Model: ${this.response.cpumodel}\nSpeed: ${this.response.cpuspeed}`
+      	document.getElementById('ramm').innerText = this.response.ramterpakai+'/'+this.response.totalram+' MB'
+      	document.getElementById('diskspace').innerText = this.response.diskused+'/'+this.response.totaldisk+' MB'
+	  }
+	  xhr.send();
+  }
 
    
 
