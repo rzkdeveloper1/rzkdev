@@ -36,3 +36,7 @@
 .progress {
 	border-radius: 6px;
 }
+
+.dropdown-item {
+	display: flex
+}
