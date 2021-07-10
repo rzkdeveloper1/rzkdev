@@ -253,6 +253,17 @@
       	location.href = `whatsapp://send?text=Hai teman, saya ingin mempromosikan website. Jika anda ingin mencoba, silahkan klik link ini => ${location.href}`
 
       })
+      
+      
+      
+      var p = new Ping();
+        p.ping("https://www.google.com", function(err, data) {
+        if (err) {
+       console.log("error loading resource")
+       data = data + " " + err;
+       }
+      console.log(data+' ms')
+      });
 
     
 
