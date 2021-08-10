@@ -40,3 +40,7 @@
 .dropdown-item {
 	display: flex
 }
+
+.nx {
+	border-radius: 6px;
+}
