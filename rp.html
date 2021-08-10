@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>RzkDeveloper</title>
+    <meta content='#007FFF' name='theme-color'/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <base target="_blank"/>
+    <link href="https://ibb.co/c3w0RKg" rel="icon">
+   <link href="main.css" rel="stylesheet" type="text/css" />
+   <script src="https://kit.fontawesome.com/ed783f9c3f.js" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+   <script src="js/fiture/carger.js"></script>
+   <script src="js/fiture/ip.js"></script>
+   <script src="js/fiture/tooltip.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  </head>
+  <body>
+  	<script>Swal.fire('RzkDeveloper',`Selamat Datang Di RzkDev `)</script>
+  	<nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-gradient shadow mb-3 fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">RzkDev</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Kemahiran Code</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="asset/contact/index.html">Contact Me</a>
+          </li>
+          <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-envelope"></i>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-user-circle"></i> New Update</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+        </div>
+        <div class="dropdown mt-2">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            	<i class="fas fa-bell"></i>
+          </button>
+           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+               <li><a class="dropdown-item" href="#"><i class="fas fa-robot"></i> <span class="ml-2">SISTEM: Check Device Added To This Website</span></a></li>
+               <li><a class="dropdown-item" href="#">Another action</a></li>
+               <li><a class="dropdown-item" href="#">Something else here</a></li>
+           </ul>
+        </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="foto">
+    	<h5>RZKDEVELOPER</h5>
+    </div>
+      <!-- BAR -->
+      	<h2>WILLY ANJG</h2>
+          <h1>Ga jelas kek dimas</h1>
+      <!-- CARD -->
+      	<div class="nx">
+            <h1 class="bg-primary"><a href="#">VOTE</a></h1>
+          </div>
+          
+      <script>
+       function inspect() {
+
+       var script =  document.createElement('script')
+
+       script.src="//cdn.jsdelivr.net/npm/eruda"
+
+       document.body.appendChild(script)
+
+       script.onload = function () {
+
+           eruda.init()
+
+       }}
+
+
+
+    function kyun(seconds){
+
+    function pad(s){
+
+      return (s < 10 ? '0' : '') + s;
+
+    }
+
+    var hours = Math.floor(seconds / (60*60));
+
+    var minutes = Math.floor(seconds % (60*60) / 60);
+
+    var seconds = Math.floor(seconds % 60);
+
+
+
+    //return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds)
+
+    return `${pad(hours)} Jam ${pad(minutes)} Menit ${pad(seconds)} Detik`
+
+  }
+
+
+
+  
+
+
+
+    window.setTimeout("waktu()", 1000);
+
+      function waktu() {
+
+          var waktu = new Date();
+
+          setTimeout("waktu()", 1000);
+
+          let strings = `${waktu.getHours()}:${waktu.getMinutes()}:${waktu.getSeconds()}`
+
+          document.getElementById("jam").textContent = strings
+
+      }
+
+   
+
+  window.setTimeout("getvisit()",1000);
+
+  function getvisit(){ 
+
+      var xhr = new XMLHttpRequest();
+
+	  xhr.open("GET", `https://api.countapi.xyz/hit/${location.host}/visits`);
+
+	  xhr.responseType = "json";
+
+	  xhr.onload = function() {
+
+      	document.getElementById('user').innerText = this.response.value + ' user'
+
+      	document.getElementById('jumplahuser').innerText = location.host+' RzkDev Memiliki '+this.response.value+' User'
+
+	  }
+
+	  xhr.send();
+
+  }
+
+    
+
+      document.querySelector("#inspectel").addEventListener("click", function() {
+
+      	Swal.fire('Harap bersabar ....','biasanya memakan waktu lama')
+
+      	inspect()
+
+      })
+
+    
+
+      document.querySelector("#sebarwa").addEventListener("click", function() {
+
+      	location.href = `whatsapp://send?text=Hai teman, saya ingin mempromosikan website. Jika anda ingin mencoba, silahkan klik link ini => ${location.href}`
+
+      })
+      
+      
+      
+      var p = new Ping();
+        p.ping("https://www.google.com", function(err, data) {
+        if (err) {
+       console.log("error loading resource")
+       data = data + " " + err;
+       }
+      console.log(data+' ms')
+    });
+
+    
+
+      </script>
+   </body> 
+</html>
